@@ -32,7 +32,7 @@
         <datatables:column title="Telephone" property="telephone"/>
         <datatables:column title="Pets" cssStyle="width: 100px;">
             <c:forEach var="pet" items="${owner.pets}">
-                <c:out value="${pet.name} "/>
+                <c:out value="${pet.name}:${pet.LocalDate} "/>
             </c:forEach>
         </datatables:column>
         <datatables:export type="pdf" cssClass="btn" cssStyle="height: 25px;"/>

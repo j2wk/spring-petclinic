@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <jsp:include page="../fragments/bodyHeader.jsp"/>
-    <h2>Owners--------</h2>
+    <h2>Owners</h2>
 
     <datatables:table id="owners" data="${selections}" row="owner" theme="bootstrap2"
                       cssClass="table table-striped" pageable="false" info="false" export="pdf">
@@ -32,7 +32,7 @@
         <datatables:column title="Telephone" property="telephone"/>
         <datatables:column title="Pets" cssStyle="width: 100px;">
             <c:forEach var="pet" items="${owner.pets}">
-                <c:out value="${pet.name}"/>
+                <c:out value="${pet.name}:${pet.birth_date} "/>
             </c:forEach>
         </datatables:column>
         <datatables:export type="pdf" cssClass="btn" cssStyle="height: 25px;"/>

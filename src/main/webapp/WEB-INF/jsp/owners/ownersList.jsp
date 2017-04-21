@@ -30,7 +30,7 @@
         <datatables:column title="Address" property="address" cssStyle="width: 200px;"/>
         <datatables:column title="City" property="city"/>
         <datatables:column title="Telephone" property="telephone"/>
-        <datatables:column title="Pets" cssStyle="width: 100px;">
+        <datatables:column title="Pets" cssStyle="width: 150px;">
             <c:forEach var="pet" items="${owner.pets}">
                 <c:out value="${pet.name}:${pet.birthDate} "/>
             </c:forEach>
